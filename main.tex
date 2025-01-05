@@ -1,0 +1,193 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------Added----------
+\usepackage{fontawesome}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{TitleBlue}{HTML}{2C44BF}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{TitleBlue}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{0pt}}
+  }
+}
+
+\newcommand{\resumeEducationHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small{#2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\linespread{1.1}\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape \textcolor{TitleBlue}{Howard Yen}} \\ \vspace{5pt}
+    \small \href{https://hwrdyen.netlify.app/}{\underline{Portfolio}} $|$ \href{mailto:hwrdykx@gmail.com}{\underline{hwrdykx@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/howardykx/}{\underline{linkedin.com/in/howardykx}} $|$
+    \href{https://github.com/hwrdyen}{\underline{github.com/hwrdyen}} $|$ 
+    \small 647-572-5081 $|$
+    \small Toronto, CA
+\end{center}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{\textbf{\textcolor{TitleBlue}{Technical Skills}}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Core}{: Java, TypeScript, JavaScript, Python, React, Node.js, JUnit, Pytest, Jest, Selenium, Playwright, Cypress,  \hspace*{28pt} SQL, NoSQL, MySQL, MongoDB, Prisma, Sass, SCSS, REST} \\
+     \textbf{Exposed}{: Spring Boot, PostgresDB, AWS, GCP, Docker, Jenkins, Github Actions, Firebase, Next.js, Linux(ubuntu)} \\
+    }}
+ \end{itemize}
+
+%-----------EDUCATION-----------
+\section{\textbf{\textcolor{TitleBlue}{Education}}}
+  \resumeSubHeadingListStart
+    \resumeEducationHeading
+          {\textbf{University of Toronto} $|$ \emph{Bachelor of Industrial Engineering}}{Sep 2019 - Jun 2024}
+          \resumeItemListStart
+            \resumeItem{Coursework: Object-Oriented Programming (Java), Algorithms \& Data Structures (Python), Info Systems Design \& Analysis, Fund. of Electrical Circuits, Stochastic Operations Research, Intro to A.I., Fund. of Machine Learning}
+          \resumeItemListEnd
+    \resumeEducationHeading
+      {\textbf{Brainstation} $|$ \emph{\href{https://drive.google.com/file/d/1xsE1r73BNod3Vxk0RSKeM_JtRMXfE8Fr/view?usp=sharing}{\faLink $ $ \underline{Diploma}} in Software Engineering}}{}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{\textbf{\textcolor{TitleBlue}{Experience}}}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {MultiplAI (Stealth Startup) $|$ Full Stack Software Engineer}{Present}
+      \resumeItemListStart
+        \resumeItem{Built CI/CD pipeline with GitHub Actions to automate Docker image builds, push to AWS ECR, and deploy to ECS, \textbf{reducing deployment time by 4X} and improving release reliability}
+        \resumeItem{\textbf{Optimized OpenAI API token usage by 75\%} with Python content extraction algorithm using BeautifulSoup, eliminating irrelevant data to enhance model performance and reduce error propagation}
+        \resumeItem{Integrated scalable AWS architecture with SQS, EBS, and multi-threading, enabling seamless scraper and AI parser integration, \textbf{achieving over 99\% data extraction accuracy} and improved processing efficiency}
+        \resumeItem{Implemented a contribution activity tracking system using TypeScript, Next.js, and TailwindCSS for a Job Application Tracker, resulting in a \textbf{48\% increase in user engagement}}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {\href{https://drive.google.com/file/d/15HhrfAiigf7PadQJSvAZuUVnsZU4YN-8/view?usp=sharing} {Nanoleaf $|$ Software Engineer Intern \faLink}}{May 2022 - May 2023}
+      \resumeItemListStart
+        \resumeItem{\textbf{Increased bundle sales by 30\%}  by architecting a back-end API solution using Ruby, JavaScript, and Shopify APIs to streamline product bundling and resolve warehouse system and Shopify API constraints}
+        \resumeItem{\textbf{Achieved a 10X reduction in infrastructure expenses} by developing a full-stack website with React front-end and Node.js back-end on Google Cloud Platform, migrating the WordPress blog to the main domain website}
+        \resumeItem{\textbf{Engineered a 45\% increase in End-to-End test coverage} by automating testing with Python, Pytest, and Selenium, reducing defect resolution time from 3 days to 8 hours}
+      \resumeItemListEnd
+
+    \resumeSubheading  {\href{https://drive.google.com/file/d/1SDomjqvGpKoEzaa_fJZZ0PtTA4o0gxUQ/view?usp=sharing} {Word Up $|$ Software Engineer Intern \faLink}}{May 2023 - Sep 2023}
+      \resumeItemListStart
+        \resumeItem{\textbf{Increased automated test coverage by 3X} through the integration of unit tests into the CI and CD pipeline using TypeScript, Jest, and React Testing Library, significantly enhancing the reliability of the Next.js website}
+        \resumeItem{Engineered and optimized automated tests at the API and UI layers using TypeScript, Selenium, and Cypress, resulting in a \textbf{40\% reduction in front-end operational failures} and a \textbf{25\% decrease in post-release issues}}
+        \resumeItem{Led a team of 3 interns to improve product quality in an Agile environment by enhancing testing protocols and streamlining user acceptance testing processes, utilizing Scrum methodologies to hold sprints and daily standups}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {ASML $|$ Software IT Specialist Intern}{Jun 2020 - Sep 2020}
+      \resumeItemListStart
+        \resumeItem{Improved operational efficiency by \textbf{reducing hardware upgrading procedures from 7 days to less than 24 hours} through optimization using Dynamics 365, Power Automate, and Microsoft Power Platform tools.}
+        \resumeItem{Led a team of 3 cross-functional interns to assist IT service desk engineers in resolving \textbf{over 50 hardware and
+ software issues monthly}, ensuring minimal downtime to maintain business continuity}
+    \resumeItemListEnd
+    
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{\textbf{\textcolor{TitleBlue}{Projects}}}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Seasonal Clothing Classifier Model (Machine Learning)} $|$ \emph{Lead Software Engineer}}{}
+          \resumeItemListStart
+            \resumeItem{Led a team of 4 to develop a PyTorch-based clothing classification model using ANN, CNN, and AlexNet, achieving \textbf{over 80\% validation accuracy} through transfer learning and addressing dataset limitations}
+            \resumeItem{Researched and implemented 4 CNN architectures, improving test accuracy from 48.08\% to 63.12\% by applying techniques like dropout and normalization to mitigate overfitting}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%-------------------------------------------
+%
+\end{document}
