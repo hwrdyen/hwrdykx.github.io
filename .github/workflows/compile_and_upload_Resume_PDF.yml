@@ -54,9 +54,9 @@ jobs:
           git config user.email "${{ secrets.USER_EMAIL }}"
           git fetch origin
           git switch --orphan gh-pages
-          git rm -rf . # Remove all existing files
-          cp main.pdf howard_resume.pdf # Rename PDF for clarity
+          # Ensure there's at least one file to commit
           echo "Resume compiled on ${{ github.event.head_commit.timestamp }}" > README.md
-          git add howard_resume.pdf README.md
+          cp main.pdf howard_resume.pdf # Ensure the PDF is available
+          git add README.md howard_resume.pdf
           git commit -m "Deploy resume compiled on ${{ github.event.head_commit.timestamp }}"
           git push -f origin gh-pages
