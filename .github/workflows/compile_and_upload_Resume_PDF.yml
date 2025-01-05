@@ -39,3 +39,24 @@ jobs:
           asset_path: ./main.pdf
           asset_name:  resume-${{ steps.time.outputs.time }}.pdf
           asset_content_type: application/pdf
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build_latex
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git config user.name "${{ secrets.user_name }}"
+          git config user.email "${{ secrets.user_email }}"
+          git fetch origin
+          git switch --orphan gh-pages
+          git rm -rf . # Remove all existing files
+          cp main.pdf howard_resume.pdf # Rename PDF for clarity
+          echo "Resume compiled on ${{ github.event.head_commit.timestamp }}" > README.md
+          git add howard_resume.pdf README.md
+          git commit -m "Deploy resume compiled on ${{ github.event.head_commit.timestamp }}"
+          git push -f origin gh-pages
