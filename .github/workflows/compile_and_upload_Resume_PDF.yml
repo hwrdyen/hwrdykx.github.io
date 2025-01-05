@@ -50,8 +50,8 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git config user.name "${{ secrets.user_name }}"
-          git config user.email "${{ secrets.user_email }}"
+          git config user.name "${{ secrets.USER_NAME }}"
+          git config user.email "${{ secrets.USER_EMAIL }}"
           git fetch origin
           git switch --orphan gh-pages
           git rm -rf . # Remove all existing files
